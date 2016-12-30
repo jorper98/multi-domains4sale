@@ -1,3 +1,6 @@
+# multi-domains4sale
+Simple single generic PHP page (with request form) to handle multiple domains for sale based on URL.
+
 #Description
 A very simple and generic PHP script and associated HTML page that displays the domain is for sale 
 It includes a display page, your asking price, and a form for the user to sumbit a message.
