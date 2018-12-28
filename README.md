@@ -33,3 +33,9 @@ Jorge Pereira
 jorge@enterprisal.com
 http://enterprisal.com
 
+#Wish list: 
+- Able assign individual prices to specific domains, and increase price annually (or not) 
+
+#History
+2018/12/25 -  partially added simple math-based captcha.   (Backend needed)
+

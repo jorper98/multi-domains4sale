@@ -1,24 +1,10 @@
-<?php include('stats/stl.php'); 
-$domain= $_SERVER['SERVER_NAME'];
-// below added on 12/25/2018
-// Source: http://carlofontanos.com/adding-a-simple-math-captcha-to-your-form-in-php/
-    $num1=rand(1,9); //Generate First number between 1 and 9  
-    $num2=rand(1,9); //Generate Second number between 1 and 9  
-    $captcha_total=$num1+$num2;
-    $math = "$num1"." + "."$num2"." =";
-    $_SESSION['rand_code'] = $captcha_total;
-
-// end of addition.
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Domain4Sale Form</title>
+    <title>Forms</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/common.css" rel="stylesheet">
@@ -36,11 +22,10 @@ domainname =location.hostname;
 
     <div class="container">
       <div class="col-sm-6">
-	   <h1> <?php echo $domain; ?> </h1>
-	   <p id="domainname">Like the domain name?</p>		
-		<h2>This domain is for sale Only - $89</h2>
+	   <h1>Like the domain name?</h1>
+	   <p id="domainname">--</p>		
+		<h2>This domain is for sale Only - $199</h2>
 		<h3>Contact site owner below:</h3>
-		
         <form class="form-horizontal" role="form">
           <div class="form-group">
             <label for="inputName" class="col-sm-2 control-label">Name</label>
@@ -61,24 +46,20 @@ domainname =location.hostname;
               <input type="text" name="message" class="form-control" id="inputMessage" placeholder="Your Message">
             </div>
           </div>
-          <div></div>
-              <label for="inputHuman" class="col-sm-2 control-label">
-              <?php echo $math; ?></label>
-            <div class="col-sm-10">
-              <input type="text" style = "width: 150px !important;" name="human" class="form-control" id="human" placeholder="Are You Human?">
-            </div>
-          
+          <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
               <button type="submit" class="btn btn-success">Submit</button>
             </div>
           </div>
-           
         </form>  
       </div>
       <div class="col-sm-6">
 
       </div>
     </div>
+
+
+
 
 
     <script src="js/jquery.min.js"></script>

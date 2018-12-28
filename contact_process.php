@@ -1,4 +1,21 @@
 <?php
+
+Function ValidateCaptcha($value)
+{
+    // not operational 
+
+    if (empty($_POST['captcha_entered'])) {
+            $errors[] = '<p class = "input-error">Please answer the Captcha Question</p>';     return false; 
+            
+    } elseif ($_REQUEST['captcha_entered']!=$_SESSION['rand_code']) {
+            $errors[] = '<p class = "input-error">Your answer to the Math Question is incorrect.</p>';    return false;
+    }
+Return true;
+}
+
+
+
+
 function ValidateEmail($value)
 {
 	$regex = '/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i';
@@ -60,7 +77,7 @@ $emailbody .='</body></html>';
 			    ."X-Mailer: PHP/" . phpversion());
 */
 		$mail = mail(CONTACT_FORM, $subject, $emailbody,
-			     "From: Domain Sale Form <".CONTACT_FORM.">\r\n"
+			    "From: Domain Sale Form <".CONTACT_FORM.">\r\n"
 			    ."Reply-To: ".CONTACT_FORM."\r\n"
 			    ."Content-type: text/html; charset=utf-8 \r\n"
 			    ."X-Mailer: PHP/" . phpversion());
